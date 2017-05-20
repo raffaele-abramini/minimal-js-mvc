@@ -1,8 +1,12 @@
-import {Controller, parser} from '../core/';
+import {Controller} from '../core/';
 
 class MyApp extends Controller {
-
 }
 
+const template = `
+	<div>
+		{message}
+	</div>
+`;
 
-parser.parse('<div>{bob}{cane}</div>');
+MyApp.init(template, {message: 'Hello world'});
