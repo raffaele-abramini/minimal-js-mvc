@@ -1,4 +1,5 @@
 import parser from './parser';
+import events from './events';
 
 class Controller {
 	static init(template, DOMSelector){
@@ -21,8 +22,10 @@ class Controller {
 	}
 
 	render(){
-		const newHTML = parser.populate(this.template, this.properties);
-		document.querySelector(this.DOMSelector).innerHTML = newHTML;
+		const newHTML = parser.parse(this.template, this.properties);
+		const DOMElem = document.querySelector(this.DOMSelector);
+		DOMElem.innerHTML = newHTML;
+		events.listen(DOMElem, this);
 	}
 
 }

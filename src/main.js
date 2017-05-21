@@ -8,6 +8,7 @@ class MyApp extends Controller {
 	}
 
 	handleButtonClick(){
+		console.log(1);
 		this.update({
 			clicks : this.properties.click+1
 		});

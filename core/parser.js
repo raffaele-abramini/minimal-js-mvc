@@ -1,7 +1,7 @@
 let id = 0;
 const parser =  {
 	parse(htmlstring, controllerInstance){
-		if(controllerInstance.__id) controllerInstance.__id =`jsmvc-${id}`;
+		if(!controllerInstance.__id) controllerInstance.__id =`jsmvc-${id}`;
 
 		let parsedHtmlstring = this._populate(htmlstring, controllerInstance);
 
