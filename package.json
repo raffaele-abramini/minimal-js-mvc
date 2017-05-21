@@ -4,7 +4,7 @@
   "description": "",
   "main": "core/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node node_modules/.bin/jest",
     "watch": "node node_modules/.bin/webpack --watch",
     "start": "node node_modules/.bin/webpack && node server.js"
   },
@@ -16,6 +16,8 @@
     "babel-preset-env": "^1.4.0",
     "babel-preset-stage-1": "^6.24.1",
     "connect": "^3.6.2",
+    "jest": "^20.0.3",
+    "jquery": "^3.2.1",
     "serve-static": "^1.12.3",
     "webpack": "^2.5.1"
   }

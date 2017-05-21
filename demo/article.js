@@ -27,7 +27,7 @@ const template = `
 		
 		<hr>
 		
-		<small>Likes: {likes}</small>
+		<small>Likes: <span class="likes">{likes}</span></small>
 		<button _onClick="handleLikeClick">
 			Like this article
 		</button>
