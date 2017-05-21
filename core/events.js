@@ -1,7 +1,6 @@
 export default {
 	listen(DOMElem, controllerInstance){
 		const eventsMap = controllerInstance.properties.__eventsMap;
-
 		eventsMap.forEach(event => {
 			if(!this._isFunction(event.method, controllerInstance)) return;
 
@@ -10,7 +9,7 @@ export default {
 		})
 	},
 
-	_isFunction(methodName, instance){
-		return typeof instance[methodName] !== 'function';
+	_isFunction(methodName, controllerInstance){
+		return typeof controllerInstance[methodName] === 'function';
 	}
 }

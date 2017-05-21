@@ -22,7 +22,7 @@ const parser =  {
 	_populateString(controllerInstance, newHtmlstring, placeholder){
 		return newHtmlstring.replace(
 			placeholder,
-			controllerInstance[this._removeBrackets(placeholder)] || ''
+			controllerInstance[this._removeBrackets(placeholder)]
 		)
 	},
 
@@ -44,6 +44,7 @@ const parser =  {
 			const result = /on(.*?)="(.*?)"/g.exec(match);
 			const elemId = `${controllerInstanceId}-${index}`;
 
+			// TODO get the event name
 			eventsMap.push({
 				event: result[1].toLowerCase(),
 				method: result[2],

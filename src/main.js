@@ -4,13 +4,16 @@ class MyApp extends Controller {
 	constructor(params){
 		super(params);
 
-		this.properties = {message:'Hello world'};
+		this.properties = {
+			message:'Hello world',
+			clicks:0
+		}
 	}
 
 	handleButtonClick(){
-		console.log(1);
+
 		this.update({
-			clicks : this.properties.click+1
+			clicks : this.properties.clicks+1
 		});
 	}
 }
@@ -19,8 +22,12 @@ const template = `
 	<div>
 		{message}
 		
+		<hr>
+		
+		<small>Likes: {clicks}</small>
+		
 		<button _onClick="handleButtonClick">
-			click me
+			Like this comment
 		</button>
 	</div>
 `;
