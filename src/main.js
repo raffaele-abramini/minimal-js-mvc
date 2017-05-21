@@ -4,7 +4,7 @@ class MyApp extends Controller {
 	constructor(params){
 		super(params);
 
-		this.properties = {message:123};
+		this.properties = {message:'Hello world'};
 	}
 
 	handleButtonClick(){
@@ -17,6 +17,10 @@ class MyApp extends Controller {
 const template = `
 	<div>
 		{message}
+		
+		<button _onClick="handleButtonClick">
+			click me
+		</button>
 	</div>
 `;
 
