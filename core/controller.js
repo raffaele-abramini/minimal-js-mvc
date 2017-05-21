@@ -38,6 +38,9 @@ class Controller {
 	render(){
 		const newHTML = parser.parse(this.template, this.properties);
 		const DOMElem = document.querySelector(this.DOMSelector);
+
+		if(!DOMElem) throw new Error('Please specify a selector for an existing DOMElement when initialising a controller.');
+
 		DOMElem.innerHTML = newHTML;
 		events.listen(DOMElem, this);
 	}
