@@ -34,4 +34,4 @@ const template = `
 	</article>
 `;
 
-Article.init(template, '.article');
+export default ()=>Article.init(template, '.article');

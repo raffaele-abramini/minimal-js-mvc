@@ -1,10 +1,12 @@
-const $ = require('jquery');
+import $ from 'jquery';
+import renderArticle from '../demo/article';
 
 beforeAll(()=>{
 	document.body.innerHTML = `
 		<div class="article"></div>
 	`;
-	require('../dist/bundle');
+
+	renderArticle();
 });
 
 test('Article is correctly rendered', ()=>{
