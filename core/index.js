@@ -1,6 +1,6 @@
 /*
-	Core index
+  Core index
  */
-import _Controller from './controller';
+import _Controller from './controller'
 
-export const Controller = _Controller;
+export const Controller = _Controller
